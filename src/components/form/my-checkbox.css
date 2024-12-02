@@ -1,0 +1,21 @@
+.my-checkbox-Checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &[data-selected] .my-checkbox-Box {
+        border-color: var(--oxford-blue);
+        background: var(--oxford-blue);
+        color: var(--lavender);
+        stroke: var(--lavender);
+    }
+}
+
+.my-checkbox-Box {
+    height: 1rem;
+    width: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    border: 1px solid var(--lavender);
+    border-radius: 0.125rem;
+    color: transparent;
+}

@@ -1,0 +1,11 @@
+.my-select-item-ListBoxItem {
+    padding: 0.25rem 0.25rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.125rem;
+
+    &[data-hovered] {
+        background: var(--tabs-gray);
+        cursor: pointer;
+    }
+}

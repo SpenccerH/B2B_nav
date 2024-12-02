@@ -1,0 +1,87 @@
+$border-color: #e6e6e6;
+$bg-hover-color: #f5f5f5;
+$bg-select-color: #e5f4ff;
+$text-link-color: #504bb9;
+$text-primary-color: #202020;
+$text-secondary-color: #4b4b4b;
+$text-disabled-color: #808080;
+
+.sam-title-section {
+  padding: 0.875rem 2rem;
+  border-bottom: 1px solid transparent;
+}
+
+.sam-title {
+  height: 2rem;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  background: $bg-hover-color;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+
+.sam-header {
+  margin: 0.75rem 2rem 1.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.sam-controls {
+  height: 3rem;
+  margin: 0 2rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.sam-content-section {
+  display: flex;
+}
+
+.sam-main-panel {
+  min-width: 0;
+  margin-left: 2rem;
+  flex: 1 1 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  grid-auto-rows: 0.5rem;
+}
+
+
+.sam-side-section {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.sam-side-panel {
+  width: 16rem;
+  padding: 1.25rem 1rem 1.75rem;
+  border: 1px solid $border-color;
+  border-radius: 0.375rem;
+
+
+  &--header {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  &--action-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  &--action-item {
+    color: $text-link-color;
+  }
+}
