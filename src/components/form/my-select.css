@@ -1,0 +1,46 @@
+.my-select-Select {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-select-Label {
+
+}
+
+/* .my-select-Button {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--slate-gray);
+    background: var(--ghost-white);
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+
+} */
+
+.my-select-Button {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--slate-gray);
+    background: #ffffff;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+
+}
+
+/* .my-select-ListBox {
+    box-sizing: border-box;
+    background: var(--ghost-white);
+    padding: 0.25rem;
+    border: 1px solid var(--slate-gray);
+    border-radius: 0.25rem;
+    width: var(--trigger-width);
+} */
+
+.my-select-ListBox {
+    box-sizing: border-box;
+    background: #ffffff;
+    padding: 0.25rem;
+    border: 1px solid var(--slate-gray);
+    border-radius: 0.25rem;
+    width: var(--trigger-width);
+}

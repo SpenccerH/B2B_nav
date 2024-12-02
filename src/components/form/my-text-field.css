@@ -1,0 +1,15 @@
+.my-text-field-TextField {
+    display: flex;
+    flex-direction: column;
+}
+
+.my-text-field-Label {
+    padding: 0.25rem 0.25rem 0.25rem 0;
+}
+
+.my-text-field-Input {
+    background: var(---white);
+    border: 1px solid var(--slate-gray);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.5rem;
+}

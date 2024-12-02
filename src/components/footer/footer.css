@@ -1,0 +1,52 @@
+.search--input {
+    all: unset;
+}
+
+.navbar-top-Button {
+    display: flex;
+    padding: 0 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    border-radius: 0.375rem;
+    transition: all 200ms;
+    &[data-hovered] {
+        background: rgba(0, 0, 0, 0.375);
+    }
+}
+
+.shopping-cart {
+    display: flex;
+    padding-left: 1em;
+    align-items: center;
+}
+
+.dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: #f8f7ff;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.375);
+}
+
+.parent-container {
+    position: relative;
+    z-index: 1;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #1A1A2E;
+}

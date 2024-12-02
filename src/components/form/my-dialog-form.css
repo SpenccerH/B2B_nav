@@ -1,0 +1,32 @@
+.my-dialog-form-Button {
+    background: var(--oxford-blue);
+    color: var(--ghost-white);
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    border: 2px solid var(--oxford-blue);
+    border-radius: 0.125rem;
+
+    transition: all 200ms;
+
+    &[data-hovered], &[data-pressed] {
+        background: var(--ghost-white);
+        color: var(--oxford-blue);
+
+        transition: all 200ms;
+    }
+}
+
+.my-dialog-form-Button--cancel {
+    background: #ffcdd2;
+    color: #b71c1c;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    border-radius: 0.125rem;
+
+    transition: all 200ms;
+
+    &[data-hovered], &[data-pressed] {
+        background: #ef9a9a;
+        box-shadow: none;
+    }
+}
