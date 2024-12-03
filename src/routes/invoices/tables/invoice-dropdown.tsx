@@ -5,9 +5,9 @@ const dropTitles = [
 ]
 
 const dropItems = [
-    { code: "LPGIG00173", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home, G6 KF-H3 US854KH [Warranty: Return Period: 15 Days; Defective Exchange Period: 90 Days; Manufacturer: 1 Year; ]", quantity: "1" },
-    { code: "LPGIG00173", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home, G6 KF-H3 US854KH [Warranty: Return Period: 15 Days; Defective Exchange Period: 90 Days; Manufacturer: 1 Year; ]", quantity: "1" },
-    { code: "LPGIG00173", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home, G6 KF-H3 US854KH [Warranty: Return Period: 15 Days; Defective Exchange Period: 90 Days; Manufacturer: 1 Year; ]", quantity: "1" },
+    { code: "LPGIG00173", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home", quantity: "1" },
+    { code: "ADW63843DW", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home", quantity: "2" },
+    { code: "A1D232DWEE", description: "Gigabyte G6 KF Gaming Laptop 16\" 165Hz Intel i7-13620H GeForce RTX 4060 16GB 1TB SSD Windows 11 Home", quantity: "3" },
 ]
 
 function InvoiceDropdown() {

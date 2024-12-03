@@ -371,7 +371,6 @@ function CreateAccount({ referral=[
                                 </div>
                             }
 
-                            {/* <FileUpload /> */}
                             <div className="py-4" />
 
                             <div className="mt-6">The information you submit will be reviewed within 1-2 business days. You will be contacted by email once your account has been approved.</div>

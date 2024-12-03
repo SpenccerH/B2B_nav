@@ -22,7 +22,7 @@ function ProductsLanding() {
                 <div className="text-2xl font-extrabold text-center">Popular Categories</div>
                 <div className="columns-3 mt-5">
                     {products.map(item => (
-                        <Link to="/hardware">
+                        <Link to="/orders">
                             <div className="border p-5 mb-4 shadow-lg">
                                 <img src={item.image} className="h-32 mx-auto" />
                                 <div className="text-xl font-bold text-center mt-4">{item.title}</div>

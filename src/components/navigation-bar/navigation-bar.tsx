@@ -64,10 +64,10 @@ export function NavigationBar() {
     const [showCables, setShowCables] = useState(false);
     const [showPower, setShowPower] = useState(false);
     const [account, setAccount] = useState(false);
-    const [showAccount, setShowAccount] = useState(false);
+    const [isAccountVisible, setAccountVisible] = useState(false);
 
     return (
-        <div className="bg-oxford-blue h-28 z-10">
+        <div className="bg-oxford-blue h-28 z-10 w-full">
             <div className="max-w-[1440px] justify-center mx-auto px-4 pt-5">
                 <div className="flex flex-row justify-between items-center text-white gap-x-10">
                     <Link to="/">
@@ -89,7 +89,7 @@ export function NavigationBar() {
                             <div className="text-sm">Store</div>
                         </div>
                         {!account &&
-                        <div className="flex flex-row justify-between items-center text-white">
+                            <div className="flex flex-row justify-between items-center text-white">
                                 <div className="flex flex-row items-center gap-x-2.5 font-semibold hover:bg-blue-900 rounded-full cursor-pointer px-5 py-0.5" onClick={() => setAccount(true)}>
                                     <User size={18} weight="fill" />
                                     <div className="text-sm">Sign In</div>
@@ -101,11 +101,25 @@ export function NavigationBar() {
                             </div>
                         }
                         {account &&
-                        <div className="flex flex-row justify-between items-center text-white">
-                                <Link to="/company-information" className="flex flex-row items-center gap-x-2.5 font-semibold hover:bg-blue-900 rounded-full cursor-pointer px-5 py-0.5" onClick={() => setAccount(true)}>
-                                    <User size={18} weight="fill" />
-                                    <div className="text-sm">Wile E.</div>
-                                </Link>
+                            <div className="flex flex-row justify-between items-center text-white">
+                                <div onMouseEnter={() => setAccountVisible(true)}>
+                                    <Link to="/account" className="flex flex-row items-center gap-x-2.5 font-semibold hover:bg-blue-900 rounded-full cursor-pointer px-5 py-0.5" onClick={() => setAccount(true)}>
+                                        <User size={18} weight="fill" />
+                                        <div className="text-sm">Wile E.</div>
+                                    </Link>
+                                </div>
+                                {isAccountVisible && (
+                                    <div className="absolute w-32 top-12 rounded-lg bg-white z-50 flex flex-col text-oxford-blue mt-2 ml-0.5 border" onMouseLeave={() => setAccountVisible(false)}>
+                                        <Link to="/account" className="flex flex-row items-center gap-x-2.5 rounded-t-lg flex flex-row items-center gap-y-0.5 px-4 py-2.5 hover:bg-tabs-gray border-b">
+                                            <User size={16} />
+                                            <div className="text-sm font-medium">Account</div>
+                                        </Link>
+                                        <Link to="/sign-in" className="flex flex-row items-center gap-x-2.5 rounded-b-lg flex flex-row items-center gap-y-0.5 px-4 py-2.5 hover:bg-tabs-gray">
+                                            <SignOut size={16} />
+                                            <div className="text-sm font-medium">Sign Out</div>
+                                        </Link>
+                                    </div>
+                                )}
                                 <Link to="/cart" className="flex flex-row items-center gap-x-2.5 font-semibold hover:bg-blue-900 rounded-full cursor-pointer px-5 py-0.5">
                                     <ShoppingCart size={18} weight="fill" />
                                     <div className="text-sm">Cart (3)</div>

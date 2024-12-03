@@ -1,11 +1,11 @@
 import OrdersTable from './tables/orders-table.tsx';
-import SidebarNav from '../../components/sidebar-nav/sidebar-nav.tsx';
 import OrdersOverview from './orders-overview.tsx';
 import OrdersTabs from '../../components/tab-navigation/orders-tabs.tsx';
 import CompletedTable from './tables/completed-table.tsx';
 import PendingTable from './tables/pending-table.tsx';
 import CancelledTable from './tables/cancelled-table.tsx';
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
+import Sidebar from '../../components/sidebar/sidebar.tsx';
+import { NavigationBar } from '../../components/navigation-bar/navigation-bar.tsx';
 
 const tabs = [
     { id: 1, title: 'All', content: <OrdersTable /> },
@@ -16,17 +16,22 @@ const tabs = [
 
 function Orders() {
     return (
-        <div className="flex">
-            <SidebarNav />
-            <div className="grow">
-                <div className="px-8 pt-5">
-                    <div className="text-2xl">Orders</div>
-                </div>
-                <div className="px-8 pt-8">
-                    <OrdersOverview />
-                </div>
-                <div className="flex flex-col gap-y-4 px-8 pb-20">
-                    <OrdersTabs tabs={tabs} />
+        <div>
+            <div className="w-full">
+                <NavigationBar />
+            </div>
+            <div className="flex justify-center max-w-[1440px] mx-auto px-4 pt-5">
+                <Sidebar />
+                <div className="grow">
+                    <div className="px-8">
+                        <div className="text-2xl font-medium pt-3">Orders</div>
+                    </div>
+                    <div className="pl-8 pt-8">
+                        <OrdersOverview />
+                    </div>
+                    <div className="pl-8 pb-20">
+                        <OrdersTabs tabs={tabs} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -26,7 +26,7 @@ function FeaturedLanding() {
                                 <div className="font-semibold text-sm mt-1.5">{item.name}</div>
                                 <div className="text-sm">{item.description}</div>
                                 <div className="inline-block w-auto pt-2.5 mt-1.5">
-                                    <Link to="/hardware-product" className="text-sm bg-oxford-blue text-center text-white font-bold rounded-lg px-4 py-2.5 hover:bg-stone-700">Shop Now</Link>
+                                    <Link to="/orders" className="text-sm bg-oxford-blue text-center text-white font-bold rounded-lg px-4 py-2.5 hover:bg-stone-700">Shop Now</Link>
                                 </div>
                             </div>
                         </div>

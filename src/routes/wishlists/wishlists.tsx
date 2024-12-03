@@ -1,8 +1,9 @@
 import Recent from "./recent.tsx";
-import SidebarNav from "../../components/sidebar-nav/sidebar-nav.tsx";
 import { useEffect } from "react";
 import ListsOverview from "./lists-overview.tsx";
 import Set from "./set.tsx";
+import { NavigationBar } from "../../components/navigation-bar/navigation-bar.tsx";
+import Sidebar from "../../components/sidebar/sidebar.tsx";
 
 function Wishlists() {
 
@@ -11,20 +12,23 @@ function Wishlists() {
     }, [location]);
 
     return (
-        <div className="flex">
-            <div className="">
-                <SidebarNav />
+        <div>
+            <div className="w-full">
+                <NavigationBar />
             </div>
-            <div className="grow">
-                <div className="px-8 pt-5">
-                    <div className="text-2xl">Wishlists</div>
-                </div>
-                <div className="flex flex-row gap-x-5 px-8 pt-8 pb-20">
-                    <div className="flex flex-col border-t pt-8 gap-y-16 grow rounded-sm">
-                        <Set />
-                        <Recent />
+            <div className="flex justify-center max-w-[1440px] mx-auto px-4 pt-5">
+                <Sidebar />
+                <div className="grow">
+                    <div className="px-8">
+                        <div className="text-2xl font-medium pt-3">Wishlists</div>
                     </div>
-                    <ListsOverview />
+                    <div className="flex flex-row gap-x-5 pl-8 pt-8 pb-20">
+                        <div className="flex flex-col border-t pt-8 gap-y-16 grow rounded-sm">
+                            <Set />
+                            <Recent />
+                        </div>
+                        <ListsOverview />
+                    </div>
                 </div>
             </div>
         </div>

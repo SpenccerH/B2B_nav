@@ -28,7 +28,7 @@ function CalendarTo() {
                                 <CalendarDots size={20} weight="light" className="" />
                             </button>
                             {isStartDatePickerOpen && (
-                            <div className="absolute mt-72 right-72">
+                            <div className="absolute mt-72 right-40">
                                 <DatePicker
                                 selected={startDate}
                                 onChange={(date) => {
@@ -48,7 +48,7 @@ function CalendarTo() {
                                 <CalendarDots size={20} weight="light" className="" />
                             </button>
                             {isEndDatePickerOpen && (
-                                <div className="absolute mt-72 right-8">
+                                <div className="absolute mt-72 right-4">
                                     <DatePicker
                                         selected={endDate}
                                         onChange={(date) => {
