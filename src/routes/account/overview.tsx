@@ -1,8 +1,8 @@
 import { Envelope, Phone } from "@phosphor-icons/react";
-import wile from "../../assets/wile.png"
+import anonymousprofile from "../../assets/anonymous-profile.jpg"
 
 const basic = [
-    { image: wile, name: "Wile E. Coyote", role: "Business Analyst", access: "Purchaser Access" },
+    { image: anonymousprofile, name: "Wile E. Coyote", role: "Business Analyst", access: "Purchaser Access" },
 ]
 
 const about = [
