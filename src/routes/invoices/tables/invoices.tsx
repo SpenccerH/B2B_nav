@@ -9,7 +9,7 @@ const titles = [
     { id: 3, name: "Due Date" },
     { id: 4, name: "Invoice Status" },
     { id: 5, name: "Ordered By" },
-    { id: 6, name: "Invoice Amount" },
+    { id: 6, name: "Total" },
     { id: 7, name: "Balance" },
 ]
 

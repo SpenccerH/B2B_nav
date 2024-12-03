@@ -8,7 +8,7 @@ $text-disabled-color: #808080;
 
 .sn-container {
   height: 100vh;
-  width: 16.25rem;
+  width: 15rem;
   position: fixed;
   flex: 0 0 auto;
   display: flex;
@@ -49,7 +49,8 @@ $text-disabled-color: #808080;
     gap: 0.75rem;
 
     &:hover {
-      background: $bg-hover-color
+      background: $bg-hover-color;
+      border-radius: 0.375rem;
     }
   }
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Envelope, Pen, Phone, ShoppingBagOpen } from "@phosphor-icons/react";
 
 const options = [
-    { icon: <ShoppingBagOpen size={80} weight="thin" color="#3b82f6" />, title: "Shop for your business.", body1: "Shop Online", body2: "Shop In-Person", link1: "/hardware", link2: "/hardware" },
+    { icon: <ShoppingBagOpen size={80} weight="thin" color="#3b82f6" />, title: "Shop for your business.", body1: "Shop Online", body2: "Shop In-Person", link1: "/orders", link2: "/orders" },
 ]
 
 const contact = [

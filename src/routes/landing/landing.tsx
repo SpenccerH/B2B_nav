@@ -1,6 +1,4 @@
 import { useEffect } from "react";
-// import FooterBottom from "../../components/footer/footer-bottom";
-// import FooterTop from "../../components/footer/footer-top";
 import { NavigationBar } from "../../components/navigation-bar/navigation-bar";
 import BannerLanding from "./sections/banner-landing";
 import ContactLanding from "./sections/contact-landing";

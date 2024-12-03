@@ -1,5 +1,3 @@
-import SidebarNav from '../../components/sidebar-nav/sidebar-nav.tsx';
-import { MagnifyingGlassIcon } from '@radix-ui/react-icons';
 import { useEffect } from 'react';
 import General from './general.tsx';
 import Contacts from './contacts/contacts.tsx';
@@ -7,6 +5,8 @@ import Addresses from './addresses/addresses.tsx';
 import NavigationTabs from '../../components/tab-navigation/navigation-tabs.tsx';
 import Credit from './credit.tsx';
 import Authorized from './authorized.tsx';
+import { NavigationBar } from '../../components/navigation-bar/navigation-bar.tsx';
+import Sidebar from '../../components/sidebar/sidebar.tsx';
 
 const tabs = [
     { id: 1, title: 'General', content: <General /> },
@@ -23,14 +23,19 @@ function CompanyInformation() {
     }, [location]);
 
     return (
-        <div className="flex">
-            <SidebarNav />
-            <div className="grow">
-                <div className="px-8 pt-5">
-                    <div className="text-2xl">Company Information</div>
-                </div>
-                <div className="px-8">
-                    <NavigationTabs tabs={tabs} />
+        <div>
+            <div className="w-full">
+                <NavigationBar />
+            </div>
+            <div className="flex justify-center max-w-[1440px] mx-auto px-4 pt-5">
+                <Sidebar />
+                <div className="grow">
+                    <div className="px-8">
+                        <div className="text-2xl font-medium pt-3">Company Information</div>
+                    </div>
+                    <div className="pl-8">
+                        <NavigationTabs tabs={tabs} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -109,7 +109,7 @@ function OrdersTable({ items=[
                             <div className="pr-2.5" />
                             <td className="font-medium">{item.number}</td>
                             <td className="py-6 font-medium">{item.date}</td>
-                            <td className="font-medium w-32 2xl:w-56">
+                            <td className="font-medium">
                                 {item.status === "Completed" &&
                                     <span className="text-xs text-green-600 flex items-center">
                                         <div className="h-1 w-1 rounded-full bg-green-600 mr-1.5 ml-0.5"/>
@@ -147,35 +147,6 @@ function OrdersTable({ items=[
                                     <FilePdf size={18} />
                                 </Link>
                             </td>
-                            {/* <td className="flex flex-row py-6 font-medium hover:absolute">
-                                {item.status === "Completed" &&
-                                    <div className="inline-flex text-black rounded-sm">
-                                        <Link to={"/order-details"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">
-                                            View
-                                        </Link>
-                                        <div className="px-1">|</div>
-                                        <Link to={"/cart"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">Re-Order</Link>
-                                    </div>
-                                }
-                                {item.status === "Pending" &&
-                                    <div className="inline-flex text-black rounded-sm">
-                                        <Link to={"/order-details-pending"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">
-                                            View
-                                        </Link>
-                                        <div className="px-1">|</div>
-                                        <Link to={"/billing"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">Cancel</Link>
-                                    </div>
-                                }
-                                {item.status === "Cancelled" &&
-                                    <div className="inline-flex text-black rounded-sm">
-                                        <Link to={"/order-details"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">
-                                            View
-                                        </Link>
-                                        <div className="px-1">|</div>
-                                        <Link to={"/cart"} className="hover:border-b-2 hover:border-oxford-blue hover:border-rounded">Re-Order</Link>
-                                    </div>
-                                }
-                            </td> */}
                         </tr>
                     ))}
                 </tbody>
