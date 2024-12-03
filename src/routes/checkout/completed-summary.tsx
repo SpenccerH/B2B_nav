@@ -11,35 +11,35 @@ function CompletedSummary() {
                         <div className="text-sm font-light">Products (3 Items):</div>
                         <div className="flex flex-row gap-x-1.5">
                             <img src={laptop2} className="w-16" />
-                            <div className="text-xs">Macally Lightning USB Cable White (MISYNCABLEL10W)</div>
-                            <div className="text-sm font-light">$33.33</div>
+                            <div className="text-xs">Lenovo ThinkPad E16 Laptop 16" AMD Ryzen 7 7730U...</div>
+                            <div className="text-sm font-light">$899.99</div>
                         </div>
                         <div className="flex flex-row gap-x-1.5">
                             <img src={laptop2} className="w-16" />
-                            <div className="text-xs">ICAN 10000mAh Super Quick Charge - QC & PD 18W...</div>
-                            <div className="text-sm font-light">$33.34</div>
+                            <div className="text-xs">Lenovo V15 G4 Business Laptop 15.6" FHD Intel...</div>
+                            <div className="text-sm font-light">$799.99</div>
                         </div>
                         <div className="flex flex-row gap-x-1.5">
                             <img src={laptop2} className="w-16" />
-                            <div className="text-xs">G4900X (MISDWADADWA100 White Black All the Colors...</div>
-                            <div className="text-sm font-light">$33.33</div>
+                            <div className="text-xs">Lenovo ThinkPad E16 Business Laptop 16 AMD...</div>
+                            <div className="text-sm font-light">$899.99</div>
                         </div>
                     </div>
                     <div className="flex flex-row justify-between items-center">
                         <div className="text-sm font-light">Product Subtotal:</div>
-                        <div className="text-sm font-light">$100.00</div>
+                        <div className="text-sm font-light">$2,599.97</div>
                     </div>
                     <div className="flex flex-row justify-between items-center">
-                        <div className="text-sm font-light">Environmental Handling Fees (EHF):</div>
+                        <div className="text-sm font-light">Environmental Handling Fees:</div>
                         <div className="text-sm font-light">$1.80</div>
                     </div>
                     <div className="flex flex-row justify-between items-center">
                         <div className="text-sm font-light">Taxes:</div>
-                        <div className="text-sm font-light">$13.00</div>
+                        <div className="text-sm font-light">$338.00</div>
                     </div>
                     <div className="flex flex-row justify-between items-center border-y py-2.5">
                         <div className="font-medium">Total:</div>
-                        <div className="text-sm font-medium text-red-600">$114.80</div>
+                        <div className="text-sm font-medium text-red-600">$2,937.97</div>
                     </div>
                     <div className="flex flex-col gap-y-2.5 text-sm font-light">
                         <div className="font-normal">Payment Method</div>

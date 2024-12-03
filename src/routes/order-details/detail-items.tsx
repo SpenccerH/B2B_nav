@@ -16,9 +16,9 @@ const shipping = [
 ]
 
 const items = [
-    { id: 1, image: laptop2, name: "Macally Lightning USB Cable White (MISYNCABLEL10W)", code: "HHACMC0612", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 33.33 },
-    { id: 2, image: laptop2, name: "ICAN 10000mAh Super Quick Charge - QC & PD 18W Power Bank (F1002PD)", code: "NAFOX00001", online: "Yes", store: "Yes", date: "2024-09-28", user: "Bugs Bunny", price: 33.34 },
-    { id: 3, image: laptop2, name: "G4900X (MISDWADADWA100 White Black All the Colors of the Rainbow)", code: "HHACMC0612", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 33.33 },
+    { id: 1, image: laptop2, name: "Lenovo ThinkPad E16 Laptop 16\" AMD Ryzen 7 7730U 16GB 512 GB SSD Windows 11 Pro, 21JTS09700", code: "LPLEN03804", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 899.99 },
+    { id: 2, image: laptop2, name: "Lenovo V15 G4 Business Laptop 15.6\" FHD Intel i5-1335U 16GB 1TB SSD Windows 11 Pro, 83A100ECUS", code: "LPLEN03708", online: "Yes", store: "Yes", date: "2024-09-28", user: "Bugs Bunny", price: 799.99 },
+    { id: 3, image: laptop2, name: "Lenovo ThinkPad E16 Business Laptop 16\" AMD Ryzen 5 7430U 16GB 1TB SSD Windows 11 Pro, 21JTA003US", code: "LPLEN03867", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 899.99 },
 ];
 
 function DetailItems() {
@@ -37,7 +37,7 @@ function DetailItems() {
                     </div>
                 ))}
                 <div className="inline-block w-auto mt-2.5">
-                <Link to="/cart" className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-2.5 hover:bg-stone-700">Re-Order</Link>
+                <Link to="/cart" className="text-xs bg-oxford-blue text-center text-white font-medium rounded px-4 py-2.5 hover:bg-stone-700">Re-Order</Link>
                 </div>
             </div>
             <div className="flex flex-col gap-y-4">
@@ -78,8 +78,8 @@ function DetailItems() {
                     ))}
                 </div>
             </div>
-            <div className="inline-block w-auto mt-2.5">
-                <Link to="/orders" className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-2.5 hover:bg-stone-700">Back</Link>
+            <div className="inline-block w-auto">
+                <Link to="/orders" className="text-xs bg-oxford-blue text-center text-white font-medium rounded px-4 py-2.5 hover:bg-stone-700">Back</Link>
             </div>
         </div>
     )

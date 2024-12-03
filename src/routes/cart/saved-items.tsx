@@ -3,7 +3,7 @@ import laptop2 from "../../assets/laptop2.png"
 import { useState } from "react";
 
 const items = [
-    { id: 1, image: laptop2, name: "Random Lightning USB Cable White (MISYNCABLEL10W)", code: "HHACMC0612", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 17.99 },
+    { id: 1, image: laptop2, name: "Lenovo ThinkBook 16 G6 Business Laptop 16\" FHD Intel i7-1355U 16GB 1TB SSD Windows 11 Pro, 21KH00NFUS", code: "LPLEN03804", online: "Yes", store: "Yes", date: "2024-10-02", user: "Porky Pig", price: 999.99 },
 ];
 
 function SavedItems() {
@@ -30,7 +30,7 @@ function SavedItems() {
     };
 
     const totalPrice = items.reduce((total, item) => {
-        return total + (item.price + 0.60) * itemQuantities[item.id];
+        return total + (item.price) * itemQuantities[item.id];
     }, 0);
 
     return (
@@ -74,7 +74,7 @@ function SavedItems() {
                             </div>
                         </div>
                         <div className="flex flex-col w-56 items-end">
-                            <div className="text-lg font-medium text-red-600">{`$${((item.price + 0.60) * itemQuantities[item.id]).toFixed(2)}`}</div>
+                            <div className="text-lg font-medium text-red-600">{`$${((item.price) * itemQuantities[item.id]).toFixed(2)}`}</div>
                             <div className="text-xs">Plus $0.60 EHF</div>
 
                             <div className="text-sm text-center mt-2.5">

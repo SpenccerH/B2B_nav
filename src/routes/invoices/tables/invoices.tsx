@@ -9,7 +9,7 @@ const titles = [
     { id: 3, name: "Due Date" },
     { id: 4, name: "Invoice Status" },
     { id: 5, name: "Ordered By" },
-    { id: 6, name: "Total" },
+    { id: 6, name: "Invoice Amount" },
     { id: 7, name: "Balance" },
 ]
 
@@ -95,7 +95,7 @@ function Invoices({ items })  {
                             <td className="py-2 font-medium">{item.number}</td>
                             <td className="py-6 font-medium">{item.date}</td>
                             <td className="py-6 font-medium">{item.due}</td>
-                            <td className="py-6 font-medium w-28 2xl:w-48">
+                            <td className="py-6 font-medium">
                                 {item.status === "Paid" &&
                                     <span className="text-xs text-green-600 flex items-center">
                                         <div className="h-1 w-1 rounded-full bg-green-600 mr-1.5 ml-0.5"/>

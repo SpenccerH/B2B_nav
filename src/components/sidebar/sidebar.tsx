@@ -17,7 +17,7 @@ function Sidebar() {
         <div className="h-full w-[15rem] sticky top-5 self-start">
             <div className="border border px-2.5 rounded-lg shadow-lg w-[15rem]">
                 <div>
-                    <div className="sn-list-box">
+                    <div className="sn-list-box pt-2">
                         <span className="sn-list-box--header">
                             Account
                         </span>

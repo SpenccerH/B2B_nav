@@ -134,12 +134,12 @@ function OrdersTable({ items=[
                             <td className="py-6 font-medium">{item.track}</td>
                             <td className="py-6 flex flex-row items-center gap-x-2.5">
                                 {item.status === "Pending" &&
-                                    <Link to="/order-details-pending" target="_blank">
+                                    <Link to="/order-details-pending">
                                         <Eye size={18} className="cursor-pointer" />
                                     </Link>
                                 }
                                 {item.status !== "Pending" &&
-                                    <Link to="/order-details" target="_blank">
+                                    <Link to="/order-details">
                                         <Eye size={18} className="cursor-pointer" />
                                     </Link>
                                 }

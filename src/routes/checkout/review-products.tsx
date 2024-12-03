@@ -16,22 +16,22 @@ function ReviewProducts() {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className="py-1.5 pl-2.5">Macally Lightning USB Cable White (MISYNCABLEL10W)</td>
+                                    <td className="py-1.5 pl-2.5">Lenovo ThinkPad E16 Laptop 16" AMD Ryzen 7 7730U 16GB 512 GB SSD Windows 11 Pro, 21JTS09700</td>
                                     <td className="py-1.5 text-center w-14">1</td>
-                                    <td className="py-1.5 text-center w-28">$33.33</td>
-                                    <td className="py-1.5 text-center w-28">$33.33</td>
+                                    <td className="py-1.5 text-center w-28">$899.00</td>
+                                    <td className="py-1.5 text-center w-28">$899.00</td>
                                 </tr>
                                 <tr>
-                                    <td className="py-1.5 pl-2.5">ICAN 10000mAh Super Quick Charge - QC & PD 18W Power Bank (F1002PD)</td>
+                                    <td className="py-1.5 pl-2.5">Lenovo V15 G4 Business Laptop 15.6" FHD Intel i5-1335U 16GB 1TB SSD Windows 11 Pro, 83A100ECUS</td>
                                     <td className="py-1.5 text-center w-14">1</td>
-                                    <td className="py-1.5 text-center w-28">$33.34</td>
-                                    <td className="py-1.5 text-center w-28">$33.34</td>
+                                    <td className="py-1.5 text-center w-28">$799.00</td>
+                                    <td className="py-1.5 text-center w-28">$799.00</td>
                                 </tr>
                                 <tr>
-                                    <td className="py-1.5 pl-2.5">G4900X (MISDWADADWA100 White Black All the Colors of the Rainbow)</td>
+                                    <td className="py-1.5 pl-2.5">Lenovo ThinkPad E16 Business Laptop 16" AMD Ryzen 5 7430U 16GB 1TB SSD Windows 11 Pro, 21JTA003US</td>
                                     <td className="py-1.5 text-center w-14">1</td>
-                                    <td className="py-1.5 text-center w-28">$33.33</td>
-                                    <td className="py-1.5 text-center w-28">$33.33</td>
+                                    <td className="py-1.5 text-center w-28">$899.00</td>
+                                    <td className="py-1.5 text-center w-28">$899.00</td>
                                 </tr>
                             </tbody>
                         </table>
