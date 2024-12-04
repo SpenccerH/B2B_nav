@@ -1,17 +1,31 @@
-# B2B Website - but with the navbar in the portal !! (super cool)
+# B2B Website with the Navbar in the Portal  
 
-Ensure:
-NodeJS installed
-A code editor (I use VSCode)
+## Prerequisites  
+Ensure you have the following installed on your system:  
+- **Node.js**: Download from [nodejs.org](https://nodejs.org)  
+- **A code editor**: Recommended [VS Code](https://code.visualstudio.com)  
+- **Git**: Download from [git-scm.com](https://git-scm.com) (only needed if cloning via Git)  
 
-## How to run it
+---
 
-Click Code, and copy the HTTPS link.
-Open code editor, open a new terminal (button called terminal at the top).
-Run command git clone <insert HTTPS link here>
-Run command <npm install> to install all the dependencies.
-Run command <npm run dev> and there will hopefully be a link to a localhost.
-Open that !!
+## How to Run the Project  
 
-## If there are issues
-Check if node is installed by running node -v (there will be a version number, something like v20.17.0) !!
+### Option 1: Clone the Repository via Git  
+
+1. Go to the GitHub repository and click the **Code** button.  
+2. Copy the **HTTPS link** for the repository.  
+3. Open your **code editor** and open a terminal:  
+   - In **VS Code**, click `Terminal` in the top menu and select `New Terminal`.  
+4. Run the following commands in the terminal to set up the project:  
+   ```bash
+   # Clone the repository
+   git clone <paste HTTPS link here>
+   
+   # Navigate into the project folder
+   cd <project-folder-name>
+   
+   # Install dependencies
+   npm install
+   
+   # Start the development server
+   npm run dev
