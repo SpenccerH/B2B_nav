@@ -18,9 +18,9 @@ function Permissions() {
                 <Sidebar />
                 <div className="grow">
                     <div className="px-8">
-                        <div className="text-2xl font-medium pt-3">Orders</div>
+                        <div className="text-2xl font-medium pt-3">Permissions</div>
                     </div>
-                    <div className="px-8 pb-20">
+                    <div className="px-8 pt-8 pb-20">
                         <PermissionsTable />
                     </div>
                 </div>
