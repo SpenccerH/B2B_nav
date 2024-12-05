@@ -21,6 +21,7 @@ import SignIn from './routes/sign-in/sign-in';
 import ForgotPassword from './routes/sign-in/forgot-password';
 import ForgotSubmission from './routes/sign-in/forgot-submission';
 import Permissions from './routes/permissions/permissions';
+import Shop from './routes/shop/shop';
 
 const router = createBrowserRouter([
     {
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
     {
         path: "/permissions",
         element: <Permissions />,
+    },
+    {
+        path: "/shop",
+        element: <Shop />,
     },
 ]);
 
