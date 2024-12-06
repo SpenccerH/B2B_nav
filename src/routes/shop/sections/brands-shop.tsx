@@ -60,14 +60,12 @@ function BrandsShop() {
                     <div className="text-2xl font-bold">Shop By Brands</div>
                     <div className="flex flex-row gap-x-1.5 items-center font-semibold cursor-pointer">View More<CaretRight size={16} weight="bold" /></div>
                 </div>
-                <div className="flex flex-col gap-4">
-                    <div className="flex flex-wrap justify-between gap-8">
-                        {brands.map(item => (
-                            <div className="flex justify-center items-center h-28 w-40 2xl:w-44 grow">
-                                <img src={item.image} className="w-40" />
-                            </div>
-                        ))}
-                    </div>
+                <div className="columns-6">
+                    {brands.map(item => (
+                        <div className="mb-4">
+                            <img src={item.image} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
