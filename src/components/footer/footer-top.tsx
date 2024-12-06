@@ -1,6 +1,6 @@
 import './footer.css'
 import ccfull from "../../assets/ccfull.png"
-import { CaretRight, FacebookLogo, InstagramLogo, XLogo, YoutubeLogo } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 
 function FooterTop() {
     return (
@@ -13,7 +13,7 @@ function FooterTop() {
                             <div className="uppercase font-bold">Be the first to know!</div>
                             <div className="flex flex-row items-center gap-x-1.5 hover:underline cursor-pointer">
                                 <div className="text-sm">Current Eblast Deals</div>
-                                <CaretRight size={14} />
+                                <CaretRight size={14} weight="bold" />
                             </div>
                         </div>
                         <div className="flex flex-row items-center bg-white grow">

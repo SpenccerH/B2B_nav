@@ -17,22 +17,22 @@ import cat12 from "../../../assets/cat12.png";
 import cat13 from "../../../assets/cat13.png";
 
 const largeCategories = [
-    { image: cat1, title: "Laptop" },
+    { image: cat1, title: "Laptops, Tablet" },
     { image: cat2, title: "Desktop" },
 ]
 
 const smallCategories1 = [
-    { image1: cat3, title1: "Monitor", image2: cat6, title2: "Motherboard" },
-    { image1: cat4, title1: "Keyboard & Mice", image2: cat7, title2: "Graphics Card" },
-    { image1: cat5, title1: "PC Headset", image2: cat8, title2: "Memory" },
+    { image1: cat3, title1: "Monitors", image2: cat6, title2: "Motherboards" },
+    { image1: cat4, title1: "Keyboard & Mice", image2: cat7, title2: "Graphics Cards" },
+    { image1: cat5, title1: "PC Headsest", image2: cat8, title2: "Memory" },
 ]
 
 const smallCategories2 = [
-    { image: cat9, title: "CPU" },
-    { image: cat10, title: "SSD" },
+    { image: cat9, title: "CPUs" },
+    { image: cat10, title: "SSDs" },
     { image: cat11, title: "Video Games & Accessories" },
-    { image: cat12, title: "Collectibles" },
-    { image: cat13, title: "Chairs & Desk" },
+    { image: cat12, title: "Wi-Fi & Networking" },
+    { image: cat13, title: "Computer Cases" },
 ]
 
 function CategoriesShop() {
