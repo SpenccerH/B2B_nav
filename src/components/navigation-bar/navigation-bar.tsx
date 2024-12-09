@@ -67,7 +67,7 @@ export function NavigationBar() {
     const [isAccountVisible, setAccountVisible] = useState(false);
 
     return (
-        <div className="bg-oxford-blue h-28 z-10 w-full">
+        <div className="bg-oxford-blue h-28 z-10 w-full" onClick={() => setAccountVisible(false)}>
             <div className="max-w-[1440px] justify-center mx-auto px-4 pt-5">
                 <div className="flex flex-row justify-between items-center text-white gap-x-10">
                     <Link to="/">
