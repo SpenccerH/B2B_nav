@@ -85,7 +85,7 @@ function FooterBottom() {
                     </div> 
                 </div>
             </div>
-            <div className="py-8 border-t">
+            <div className="py-6 border-t">
                 <div className="flex flex-col max-w-[1440px] px-4 mx-auto items-center gap-y-2.5 text-xs">
                     <div className="flex flex-row gap-x-5">
                         <div className="hover:underline cursor-pointer pr-4 border-r">Privacy Policy</div>
