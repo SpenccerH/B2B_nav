@@ -40,14 +40,14 @@ const cables = [
     {id: 4, title: 'Networking Cables & Adapters'},
     {id: 5, title: 'DisplayPort / Mini DisplayPort Cables & Adapters'},
     {id: 6, title: 'HDMI Cables'},
-    {id: 7, title: 'Video Cables & ADapters'},
+    {id: 7, title: 'Video Cables & Adapters'},
     {id: 8, title: 'Audio Cables & Adapters'},
     {id: 9, title: 'Pro Audio Cables & Plugs'},
-    {id: 10, title: 'Audio Video Distribution'},
-    {id: 11, title: 'Networking Installation Accessories'},
-    {id: 12, title: 'Wall Plates & Keystones'},
-    {id: 13, title: 'Tools & Testers'},
-    {id: 14, title: 'Cables Management'},
+    // {id: 10, title: 'Audio Video Distribution'},
+    // {id: 11, title: 'Networking Installation Accessories'},
+    // {id: 12, title: 'Wall Plates & Keystones'},
+    // {id: 13, title: 'Tools & Testers'},
+    // {id: 14, title: 'Cables Management'},
 ]
 
 const power = [
