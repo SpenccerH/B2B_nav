@@ -1,11 +1,4 @@
-import {
-    Button,
-    Dialog,
-    DialogTrigger, Heading, Input, Label, Modal, ModalOverlay,
-    SearchField,
-    TextField, ToggleButton
-
-} from 'react-aria-components';
+import { Button, DialogTrigger, Input, SearchField, ToggleButton } from 'react-aria-components';
 
 
 import './contacts.css';
@@ -35,9 +28,9 @@ function Contacts() {
 
     return (
         <div className="pb-20">
-            <div className="pb-12 flex justify-between">
+            <div className="pb-6 flex justify-between">
                 <DialogTrigger>
-                    <Button className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-2.5 hover:bg-stone-700">
+                    <Button className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 h-11">
                         Add New User
                     </Button>
                     <NewUserModal />
@@ -46,7 +39,7 @@ function Contacts() {
                     <SearchField>
                         <Input className="pl-3 pr-3 pt-2 pb-2 bg-white text-oxford-blue border border-1 border-oxford-blue rounded-sm" placeholder="Search Users" />
                     </SearchField>
-                    <ToggleButton className="contacts-Button" onChange={(isSelected) => {setShowGrid(isSelected)}}>
+                    <ToggleButton className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 w-24 h-11" onChange={(isSelected) => {setShowGrid(isSelected)}}>
                         {showGrid ? (
                             <span className="flex items-center gap-2 text-sm">
                                 <SquareSplitVertical size={24} /> List

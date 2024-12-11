@@ -20,7 +20,7 @@ function ReviewSummary() {
                     </div>
                     <div className="flex flex-row justify-between items-center border-y py-2.5">
                         <div className="font-medium">Total:</div>
-                        <div className="text-sm font-medium text-red-600">$2,937.97</div>
+                        <div className="text-sm font-medium text-red-600">$2,939.77</div>
                     </div>
                     <Link to="/checkout-completed" className="text-sm font-medium text-center bg-black hover:bg-stone-700 text-white py-2 rounded mt-2.5">Place Order</Link>
                 </div>

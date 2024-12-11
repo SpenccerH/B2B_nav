@@ -1,8 +1,7 @@
-import { Button, DialogTrigger, ListBox, ListBoxItem } from 'react-aria-components';
+import { Button, DialogTrigger } from 'react-aria-components';
 import { Trash } from '@phosphor-icons/react';
-import NewTicketModal from '../tickets/new-ticket-modal.tsx';
 import NewAuthorizedModal from './modals/new-authorized-modal.tsx';
-import DeleteUserModal from './modals/delete-user-modal.tsx';
+import RemoveModal from './modals/remove-modal.tsx';
 
 const people = [
     { name: "Zulfiqar Naushad" },
@@ -12,13 +11,14 @@ const people = [
 function Authorized() {
     return (
         <div className="pb-20">
-            <div className="pb-12">
+            <div className="pb-6 flex flex-row justify-between items-center">
                 <DialogTrigger>
-                    <Button className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-3 hover:bg-stone-700">
+                    <Button className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 h-11">
                         Request New Authorized Pickup Person
                     </Button>
                     <NewAuthorizedModal />
                 </DialogTrigger>
+                <div>The names on this list are authorized to pick up orders or net terms in-store with ID verification</div>
             </div>
             <table className="w-96 bg-transparent border">
                 <thead>
@@ -38,7 +38,7 @@ function Authorized() {
                                     <Button className="flex items-center gap-2">
                                         <Trash size={20} />
                                     </Button>
-                                    <DeleteUserModal text="Authorized Pickup Person" item={`${item.name}`} />
+                                    <RemoveModal text="Authorized Pickup Person" item={`${item.name}`} />
                                 </DialogTrigger>
                             </td>
                         </tr>

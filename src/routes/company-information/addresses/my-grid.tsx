@@ -1,7 +1,6 @@
 import {Button, DialogTrigger, ListBox, ListBoxItem} from 'react-aria-components';
-import {Envelope, MapPin, PencilSimple, Phone, Trash, UserCircle} from '@phosphor-icons/react';
-import AnonymousProfile from '../../../assets/anonymous-profile.jpg';
-import DeleteUserModal from '../modals/delete-user-modal';
+import {PencilSimple, Trash} from '@phosphor-icons/react';
+import RemoveModal from '../modals/remove-modal';
 import EditAddressModal from '../modals/edit-address-modal';
 
 function MyGrid({ items }) {
@@ -66,7 +65,7 @@ function MyGrid({ items }) {
                             <Button className="flex items-center gap-2">
                                 <Trash size={20} />
                             </Button>
-                            <DeleteUserModal text="Shipping Address" item={`${item.location}`} />
+                            <RemoveModal text="Shipping Address" item={`${item.location}`} />
                         </DialogTrigger>
                     </div>
                 </ListBoxItem>

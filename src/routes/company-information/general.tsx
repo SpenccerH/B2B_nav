@@ -11,7 +11,7 @@ function General() {
 
     return (
         <div className="mb-20">
-            <div className="flex flex-col gap-y-5">
+            <div className="flex flex-col gap-y-6">
                 <div className="font-bold">Company Information</div>
                 <div className="flex flex-col gap-y-4">
                     {info.map(item => (

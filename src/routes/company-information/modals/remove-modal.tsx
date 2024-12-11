@@ -1,6 +1,6 @@
 import MyConfirmForm from '../../../components/form/my-confirm-form.tsx';
 
-function DeleteUserModal({text, item}:{text:String, item:String}) {
+function RemoveModal({text, item}:{text:String, item:String}) {
     return (
         <MyConfirmForm>
             <div className="flex flex-col p-8 text-center">
@@ -14,4 +14,4 @@ function DeleteUserModal({text, item}:{text:String, item:String}) {
     )
 }
 
-export default DeleteUserModal;
+export default RemoveModal;
