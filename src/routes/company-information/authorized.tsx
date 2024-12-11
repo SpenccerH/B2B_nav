@@ -18,7 +18,7 @@ function Authorized() {
                     </Button>
                     <NewAuthorizedModal />
                 </DialogTrigger>
-                <div>The names on this list are authorized to pick up orders or net terms in-store with ID verification</div>
+                <div className="text-sm">The names on this list are authorized to pick up orders or net terms in-store with ID verification</div>
             </div>
             <table className="w-96 bg-transparent border">
                 <thead>

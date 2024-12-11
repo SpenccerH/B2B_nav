@@ -21,7 +21,7 @@ function Credit({ items = [
                     </Button>
                     <NewCreditCardModal />
                 </DialogTrigger>
-                <div>Only administrators and finance access users can add and manage credit cards</div>
+                <div className="text-sm">Only administrators and finance access users can add and manage credit cards</div>
             </div>
             <ListBox items={items} className="grid grid-cols-3 gap-4">
                 {item => (
