@@ -14,11 +14,11 @@ function MyRequestForm({children, ...props} : DialogProps) {
                     {({ close }) => (
                         <form className="grid grid-cols-2 pl-8 pr-8 gap-y-3 gap-x-4 pb-8 bg-lavender/10">
                             {children}
-                            <div className="col-span-2 flex justify-between pt-6">
-                                <Button className="my-dialog-form-Button--cancel" onPress={close}>
+                            <div className="col-span-2 flex flex-row gap-x-10 justify-between pt-6">
+                                <Button className="text-white bg-gray-600 rounded hover:bg-gray-700 w-32 h-10" onPress={close}>
                                     Cancel
                                 </Button>
-                                <Button className="my-dialog-form-Button" onPress={close}>
+                                <Button className="text-white bg-blue-700 rounded hover:bg-blue-800 w-32 h-10" onPress={close}>
                                     Request
                                 </Button>
                             </div>

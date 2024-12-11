@@ -1,7 +1,6 @@
-import {Button, Dialog, Heading, Input, Label, Modal, ModalOverlay, TextField, Text, Key} from 'react-aria-components';
+import {Heading, Text, Key} from 'react-aria-components';
 import MyTextField from '../../../components/form/my-text-field.tsx';
 import MyDialogForm from '../../../components/form/my-dialog-form.tsx';
-import MyCheckbox from '../../../components/form/my-checkbox.tsx';
 import MySelectItem from '../../../components/form/my-select-item.tsx';
 import MySelect from '../../../components/form/my-select.tsx';
 import {useState} from 'react';
@@ -14,12 +13,12 @@ const items = [
     { id: 3, location: 'Vaughan Office', first: 'Barry', last: 'Bonds', address1: '270 West Beaver Creek Road', address2: '', city: 'Richmond Hill', province: 'ON', postal: 'L4B 3Z1', permission: "Finance Access" },
 ]
 
-function NewUserModal() {
+function EditUserModal({name}:{name:String}) {
     const [billing, setBilling] = useState(false);
     const [selectedKey, setSelectedKey] = useState<Key | null>();
     return (
         <MyDialogForm>
-            <Heading slot="title" className="col-span-2 flex justify-left text-2xl pt-8 pb-4">Add New User</Heading>
+            <Heading slot="title" className="col-span-2 flex justify-left text-2xl pt-8 pb-4">Edit User {name}</Heading>
             <MyTextField className="text-sm" label="Name" />
             <MyTextField className="text-sm" label="Position" />
             <MyTextField className="text-sm" label="Phone" />
@@ -54,4 +53,4 @@ function NewUserModal() {
     )
 }
 
-export default NewUserModal;
+export default EditUserModal;

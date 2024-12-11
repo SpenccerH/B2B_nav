@@ -1,9 +1,11 @@
 import MyTableHeader from '../../../components/table/my-table-header.tsx';
 import MyColumn from '../../../components/table/my-column.tsx';
-import {Button, Cell, Table, TableBody} from 'react-aria-components';
+import {Button, Cell, DialogTrigger, Table, TableBody} from 'react-aria-components';
 import MyRow from '../../../components/table/my-row.tsx';
 import {Envelope, PencilSimple, Phone, Trash, UserCircle} from '@phosphor-icons/react';
 import AnonymousProfile from '../../../assets/anonymous-profile.jpg';
+import DeleteUserModal from '../modals/delete-user-modal.tsx';
+import EditUserModal from '../modals/edit-user-modal.tsx';
 
 function MyTable({items}) {
     return (
@@ -11,8 +13,6 @@ function MyTable({items}) {
             <MyTableHeader>
                 <MyColumn className="pl-4" isRowHeader>User</MyColumn>
                 <MyColumn>Contact</MyColumn>
-                {/* <MyColumn>Address</MyColumn> */}
-
                 <MyColumn></MyColumn>
                 <MyColumn></MyColumn>
             </MyTableHeader>
@@ -34,24 +34,8 @@ function MyTable({items}) {
                                 <span className="flex items-center gap-2"><Envelope weight="bold"/>{item.email}</span>
                             </div>
                         </Cell>
-                        {/* <Cell>
-                            <div className="flex flex-col gap-2 text-sm text-oxford-blue/75">
-                                <span>{item.address}</span>
-                                <span>{item.city}, {item.province} {item.postal}</span>
-                            </div>
-                        </Cell> */}
                         <Cell>
                             <div className="flex flex-col gap-x-4 gap-y-2 text-sm">
-                                {/* {item.primary &&
-                                    <div className="flex pl-2 pr-2 pt-1 pb-1 bg-amber-200 text-amber-800 rounded-sm">
-                                        Primary Contact
-                                    </div>
-                                }
-                                {item.billing &&
-                                    <div className="flex pl-2 pr-2 pt-1 pb-1 bg-blue-200 text-blue-800 rounded-sm">
-                                        Billing Contact
-                                    </div>
-                                } */}
                                 {item.primary &&
                                     <span className="text-sm text-amber-600 flex items-center">
                                         <div className="h-1 w-1 rounded-full bg-amber-600 mr-1.5 ml-0.5"/>
@@ -65,9 +49,6 @@ function MyTable({items}) {
                                     </span>
                                 }
                                 {item.web ?
-                                    // (<div className="flex pl-2 pr-2 pt-1 pb-1 bg-green-200 text-green-800 rounded-sm">
-                                    //     {item.web}
-                                    // </div>)
                                     (<span className="text-sm text-green-600 flex items-center">
                                         <div className="h-1 w-1 rounded-full bg-green-600 mr-1.5 ml-0.5"/>
                                         {item.web}
@@ -81,8 +62,18 @@ function MyTable({items}) {
                         </Cell>
                         <Cell>
                             <div className="flex gap-4 items-center">
-                                <Button><PencilSimple size={20} /></Button>
-                                <Button><Trash size={20} /></Button>
+                                <DialogTrigger>
+                                    <Button className="flex items-center gap-2">
+                                        <PencilSimple size={20} />
+                                    </Button>
+                                    <EditUserModal name={`${item.first} ${item.last}`} />
+                                </DialogTrigger>
+                                <DialogTrigger>
+                                    <Button className="flex items-center gap-2">
+                                        <Trash size={20} />
+                                    </Button>
+                                    <DeleteUserModal text="User" item={`${item.first} ${item.last}`} />
+                                </DialogTrigger>
                             </div>
                         </Cell>
                     </MyRow>

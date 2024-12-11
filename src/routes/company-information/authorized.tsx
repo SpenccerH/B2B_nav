@@ -2,6 +2,7 @@ import { Button, DialogTrigger, ListBox, ListBoxItem } from 'react-aria-componen
 import { Trash } from '@phosphor-icons/react';
 import NewTicketModal from '../tickets/new-ticket-modal.tsx';
 import NewAuthorizedModal from './modals/new-authorized-modal.tsx';
+import DeleteUserModal from './modals/delete-user-modal.tsx';
 
 const people = [
     { name: "Zulfiqar Naushad" },
@@ -32,7 +33,14 @@ function Authorized() {
                         <tr className="border-t border-slate-300 text-sm">
                             <td></td>
                             <td className="py-4">{item.name}</td>
-                            <td className="py-4 flex justify-center"><Trash size={18} className="cursor-pointer" /></td>
+                            <td className="py-4 flex justify-center">
+                                <DialogTrigger>
+                                    <Button className="flex items-center gap-2">
+                                        <Trash size={20} />
+                                    </Button>
+                                    <DeleteUserModal text="Authorized Pickup Person" item={`${item.name}`} />
+                                </DialogTrigger>
+                            </td>
                         </tr>
                     ))}
                 </tbody>

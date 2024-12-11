@@ -1,15 +1,13 @@
 import { Heading } from 'react-aria-components';
 import MyTextField from '../../../components/form/my-text-field.tsx';
-import MyCreditForm from '../../../components/form/my-credit-form.tsx';
+import MyDialogForm from '../../../components/form/my-dialog-form.tsx';
 
 function ListModal() {
     return (
-        <MyCreditForm>
-            <Heading slot="title" className="col-span-2 justify-left text-3xl pt-8 pb-4">New List</Heading>
-            <div className="flex flex-col gap-y-2.5">
-                <MyTextField className="text-sm" label="List Name" />
-            </div>
-        </MyCreditForm>
+        <MyDialogForm>
+            <Heading slot="title" className="col-span-2 justify-left text-2xl pt-8 pb-4">New List</Heading>
+            <MyTextField className="col-span-2 text-sm" label="List Name" />
+        </MyDialogForm>
     )
 }
 

@@ -1,6 +1,9 @@
-import {Button, ListBox, ListBoxItem} from 'react-aria-components';
+import {Button, DialogTrigger, ListBox, ListBoxItem} from 'react-aria-components';
 import {Envelope, MapPin, PencilSimple, Phone, Trash, UserCircle} from '@phosphor-icons/react';
 import AnonymousProfile from '../../../assets/anonymous-profile.jpg';
+import DeleteUserModal from '../modals/delete-user-modal';
+import NewUserModal from '../modals/new-user-modal';
+import EditUserModal from '../modals/edit-user-modal';
 
 function MyGrid({ items }) {
     return (
@@ -28,11 +31,6 @@ function MyGrid({ items }) {
                                 <Envelope weight="bold"/>
                                 {item.email}
                             </div>
-                            {/* <div className="flex items-center gap-2">
-                                <MapPin weight="bold"/>
-                                {item.address}
-                            </div> */}
-
                         </div>
                         <div className="flex gap-4 text-sm">
                             {item.primary &&
@@ -60,12 +58,18 @@ function MyGrid({ items }) {
                         </div>
                     </div>
                     <div className="flex flex-col items-end gap-4 text-oxford-blue/50">
-                        <Button className="flex items-center gap-2">
-                            <PencilSimple size={20} />
-                        </Button>
-                        <Button className="flex items-center gap-2">
-                            <Trash size={20} />
-                        </Button>
+                        <DialogTrigger>
+                            <Button className="flex items-center gap-2">
+                                <PencilSimple size={20} />
+                            </Button>
+                            <EditUserModal name={`${item.first} ${item.last}`} />
+                        </DialogTrigger>
+                        <DialogTrigger>
+                            <Button className="flex items-center gap-2">
+                                <Trash size={20} />
+                            </Button>
+                            <DeleteUserModal text="User" item={`${item.first} ${item.last}`} />
+                        </DialogTrigger>
                     </div>
                 </ListBoxItem>
             )}

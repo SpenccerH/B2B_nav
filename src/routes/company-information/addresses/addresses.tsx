@@ -1,5 +1,5 @@
 import {Button, DialogTrigger, Input, SearchField, ToggleButton} from 'react-aria-components';
-import NewAddressModal from './new-address-modal.tsx';
+import NewAddressModal from '../modals/new-address-modal.tsx';
 import {GridNine, SquareSplitVertical} from '@phosphor-icons/react';
 import {useState} from 'react';
 import MyTable from './my-table.tsx';
