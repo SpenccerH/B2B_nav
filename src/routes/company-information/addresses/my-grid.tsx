@@ -1,6 +1,8 @@
-import {Button, ListBox, ListBoxItem} from 'react-aria-components';
+import {Button, DialogTrigger, ListBox, ListBoxItem} from 'react-aria-components';
 import {Envelope, MapPin, PencilSimple, Phone, Trash, UserCircle} from '@phosphor-icons/react';
 import AnonymousProfile from '../../../assets/anonymous-profile.jpg';
+import DeleteUserModal from '../modals/delete-user-modal';
+import EditAddressModal from '../modals/edit-address-modal';
 
 function MyGrid({ items }) {
     return (
@@ -48,21 +50,24 @@ function MyGrid({ items }) {
                                 </span>)
                                 :
                                 (
-                                    // <Button className="flex pl-2 pr-2 pt-1 pb-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 focus:outline-none text-oxford-blue rounded-sm">
-                                    //     Set as Billing Address
-                                    // </Button>
                                     <div />
                                 )
                             }
                         </div>
                     </div>
                     <div className="flex flex-col items-end gap-4 text-oxford-blue/50">
-                        <Button className="flex items-center gap-2">
-                            <PencilSimple size={20} />
-                        </Button>
-                        <Button className="flex items-center gap-2">
-                            <Trash size={20} />
-                        </Button>
+                        <DialogTrigger>
+                            <Button className="flex items-center gap-2">
+                                <PencilSimple size={20} />
+                            </Button>
+                            <EditAddressModal name={`${item.location}`} />
+                        </DialogTrigger>
+                        <DialogTrigger>
+                            <Button className="flex items-center gap-2">
+                                <Trash size={20} />
+                            </Button>
+                            <DeleteUserModal text="Shipping Address" item={`${item.location}`} />
+                        </DialogTrigger>
                     </div>
                 </ListBoxItem>
             )}

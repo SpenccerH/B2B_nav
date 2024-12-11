@@ -48,11 +48,11 @@ function Contacts() {
                     </SearchField>
                     <ToggleButton className="contacts-Button" onChange={(isSelected) => {setShowGrid(isSelected)}}>
                         {showGrid ? (
-                            <span className="flex items-center gap-2">
+                            <span className="flex items-center gap-2 text-sm">
                                 <SquareSplitVertical size={24} /> List
                             </span>
                         ) : (
-                            <span className="flex items-center gap-2">
+                            <span className="flex items-center gap-2 text-sm">
                                 <GridNine size={24} /> Grid
                             </span>
                         )}
