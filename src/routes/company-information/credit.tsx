@@ -3,7 +3,7 @@ import { Trash } from '@phosphor-icons/react';
 import mastercard from "../../assets/mastercard.png";
 import visa from "../../assets/visa.png";
 import NewCreditCardModal from './modals/new-credit-card-modal';
-import DeleteUserModal from './modals/delete-user-modal';
+import RemoveModal from './modals/remove-modal';
 
 function Credit({ items = [
     { id: 1, image: mastercard, number: '**** **** **** **** 4576', company: 'Mastercard', name: 'Bugs Bunny', expiry: '03/24', default: true },
@@ -14,9 +14,9 @@ function Credit({ items = [
 ] }) {
     return (
         <div className="pb-20">
-            <div className="pb-12 flex flex-row justify-between items-center">
+            <div className="pb-6 flex flex-row justify-between items-center">
                 <DialogTrigger>
-                    <Button className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-3 hover:bg-stone-700">
+                    <Button className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 h-11">
                         Add New Credit Card
                     </Button>
                     <NewCreditCardModal />
@@ -68,7 +68,7 @@ function Credit({ items = [
                                 <Button className="flex items-center gap-2">
                                     <Trash size={20} />
                                 </Button>
-                                <DeleteUserModal text="Credit Card" item={`${item.number}`} />
+                                <RemoveModal text="Credit Card" item={`${item.number}`} />
                             </DialogTrigger>
                         </div>
                     </ListBoxItem>

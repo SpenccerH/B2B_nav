@@ -15,9 +15,9 @@ function Addresses() {
     const [ showGrid, setShowGrid ] = useState(false);
     return (
         <div className="pb-20">
-            <div className="pb-12 flex justify-between">
+            <div className="pb-6 flex justify-between">
                 <DialogTrigger>
-                    <Button className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-2.5 hover:bg-stone-700">
+                    <Button className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 h-11">
                         Request New Shipping Address
                     </Button>
                     <NewAddressModal />
@@ -26,7 +26,7 @@ function Addresses() {
                     <SearchField>
                         <Input className="px-3 py-2.5 bg-white text-oxford-blue border border-1 border-oxford-blue rounded-sm" placeholder="Search Addresses" />
                     </SearchField>
-                    <ToggleButton className="text-sm bg-oxford-blue text-center text-white font-medium rounded-sm px-4 py-2.5 hover:bg-stone-700" onChange={(isSelected) => {setShowGrid(isSelected)}}>
+                    <ToggleButton className="text-sm bg-blue-900 hover:bg-blue-950 text-center text-white font-medium rounded px-4 py-2.5 w-24 h-11" onChange={(isSelected) => {setShowGrid(isSelected)}}>
                         {showGrid ? (
                             <span className="flex items-center gap-2">
                                 <SquareSplitVertical size={24} /> List

@@ -69,7 +69,7 @@ function CartSummary() {
                     </div>
                     <div className="flex flex-row justify-between items-center border-y py-2.5">
                         <div className="font-medium">Total:</div>
-                        <div className="text-sm font-medium text-red-600">$2,937.97</div>
+                        <div className="text-sm font-medium text-red-600">$2,939.77</div>
                     </div>
                     <div className="flex flex-col gap-y-2.5 pb-2.5">
                         <div className="font-medium">Coupon Code</div>

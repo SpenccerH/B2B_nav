@@ -37,7 +37,7 @@ function DetailItemsPending() {
                     </div>
                 ))}
                 <div className="inline-block w-auto mt-2.5">
-                    <button className="text-xs bg-oxford-blue text-center text-white font-medium rounded px-4 py-2.5 hover:bg-stone-700">Cancel Order</button>
+                    <Link to="/orders" className="text-xs bg-oxford-blue text-center text-white font-medium rounded px-4 py-2.5 hover:bg-stone-700">Cancel Order</Link>
                 </div>
             </div>
             <div className="flex flex-col gap-y-4">

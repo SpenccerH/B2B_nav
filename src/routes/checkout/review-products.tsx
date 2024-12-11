@@ -39,10 +39,10 @@ function ReviewProducts() {
                 </div>
                 <div className="bg-tabs-gray flex flex-col">
                     <div className="flex flex-col text-sm px-5 pb-4 gap-y-1 pt-5">
-                        <div>Subtotal: $100.00</div>
+                        <div>Subtotal: $2,599.97</div>
                         <div>EHF: $1.80</div>
-                        <div>Taxes: $13.00</div>
-                        <div>Total: $114.80</div>
+                        <div>Taxes: $338.00</div>
+                        <div>Total: $2,939.77</div>
                     </div>
                 </div>
             </div>

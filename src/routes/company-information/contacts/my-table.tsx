@@ -2,9 +2,9 @@ import MyTableHeader from '../../../components/table/my-table-header.tsx';
 import MyColumn from '../../../components/table/my-column.tsx';
 import {Button, Cell, DialogTrigger, Table, TableBody} from 'react-aria-components';
 import MyRow from '../../../components/table/my-row.tsx';
-import {Envelope, PencilSimple, Phone, Trash, UserCircle} from '@phosphor-icons/react';
+import {Envelope, PencilSimple, Phone, Trash} from '@phosphor-icons/react';
 import AnonymousProfile from '../../../assets/anonymous-profile.jpg';
-import DeleteUserModal from '../modals/delete-user-modal.tsx';
+import RemoveModal from '../modals/remove-modal.tsx';
 import EditUserModal from '../modals/edit-user-modal.tsx';
 
 function MyTable({items}) {
@@ -72,7 +72,7 @@ function MyTable({items}) {
                                     <Button className="flex items-center gap-2">
                                         <Trash size={20} />
                                     </Button>
-                                    <DeleteUserModal text="User" item={`${item.first} ${item.last}`} />
+                                    <RemoveModal text="User" item={`${item.first} ${item.last}`} />
                                 </DialogTrigger>
                             </div>
                         </Cell>
