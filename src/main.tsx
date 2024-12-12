@@ -22,6 +22,7 @@ import ForgotPassword from './routes/sign-in/forgot-password';
 import ForgotSubmission from './routes/sign-in/forgot-submission';
 import Permissions from './routes/permissions/permissions';
 import Shop from './routes/shop/shop';
+import CreateAccountJamesChow from './routes/create-account/create-account-james-chow';
 
 const router = createBrowserRouter([
     {
@@ -103,6 +104,10 @@ const router = createBrowserRouter([
     {
         path: "/shop",
         element: <Shop />,
+    },
+    {
+        path: "/create-account/james-chow",
+        element: <CreateAccountJamesChow />,
     },
 ]);
 
