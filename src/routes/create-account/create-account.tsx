@@ -36,10 +36,7 @@ const agreement = [
     { title: "I/We expressly consent to CANADA COMPUTERS obtaining any necessary reports containing business credit or relevant information to facilitate credit considerations with CANADA COMPUTERS. I/We declare that all information provided is true and accurate in every aspect. This declaration is made solely for the purpose of establishing credit arrangements with CANADA COMPUTERS and will remain confidential." }
 ]
 
-function CreateAccount({ referral=[
-    { name: ""  },
-] })  {
-
+function CreateAccount({ referral=[{ name: ""  },] })  {
     const topRef = useRef(null);
 
     useEffect(() => {
