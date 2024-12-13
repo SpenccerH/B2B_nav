@@ -10,7 +10,7 @@ const info = [
 function General() {
 
     return (
-        <div className="mb-20">
+        <div className="mb-20 text-black">
             <div className="flex flex-col gap-y-6">
                 <div className="font-bold">Company Information</div>
                 <div className="flex flex-col gap-y-4">
@@ -33,9 +33,9 @@ function General() {
                             <CreditModal />
                         </DialogTrigger>
                     </div>
-                    <div className="text-sm font-medium">Terms: NET30</div>
-                    <div className="text-sm font-medium">Credit Limit: $6,000.00</div>
-                    <div className="text-sm font-medium">Available Credit: $701.31</div>
+                    <div className="text-sm">Terms: NET30</div>
+                    <div className="text-sm">Credit Limit: $6,000.00</div>
+                    <div className="text-sm">Available Credit: $701.31</div>
                 </div>          
             </div>
         </div>
