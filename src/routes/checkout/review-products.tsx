@@ -2,8 +2,8 @@ function ReviewProducts() {
     return (
         <div className="border text-black">
             <div className="flex flex-col">
-                <div className="bg-tabs-gray flex flex-col border-b">
-                    <div className="px-5 pt-2.5 pb-7 text-sm">
+                <div className="bg-tabs-gray flex flex-col">
+                    <div className="px-5 pt-2.5 pb-2.5 text-sm">
                         <div className="py-2.5 text-lg">Order</div>
                         <table className="w-full border border-slate-400">
                             <thead>
@@ -37,8 +37,8 @@ function ReviewProducts() {
                         </table>
                     </div>
                 </div>
-                <div className="bg-tabs-gray flex flex-col">
-                    <div className="flex flex-col text-sm px-5 pb-4 gap-y-1 pt-5">
+                <div className="text-right bg-tabs-gray flex flex-col">
+                    <div className="flex flex-col text-sm px-5 pb-4 gap-y-1">
                         <div>Subtotal: $2,599.97</div>
                         <div>EHF: $1.80</div>
                         <div>Taxes: $338.00</div>

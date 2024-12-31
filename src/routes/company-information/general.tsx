@@ -11,19 +11,18 @@ function General() {
 
     return (
         <div className="mb-20 text-black">
-            <div className="flex flex-col gap-y-6">
+            <div className="flex flex-col">
                 <div className="font-bold">Company Information</div>
-                <div className="flex flex-col gap-y-4">
+                <div className="flex flex-col">
                     {info.map(item => (
                         <div className="flex flex-col gap-y-1 text-sm">
-                            <div className="font-semibold">{item.title}</div>
                             <div>{item.body1}</div>
                             <div>{item.body2}</div>
                         </div>
                     ))}
                 </div>
                 
-                <div className="flex flex-col gap-y-1 mt-5">
+                <div className="flex flex-col gap-y-1 mt-10">
                     <div className="flex flex-row items-center gap-x-2.5">
                         <div className="font-bold">Net Terms</div>
                         <DialogTrigger>
@@ -36,7 +35,7 @@ function General() {
                     <div className="text-sm">Terms: NET30</div>
                     <div className="text-sm">Credit Limit: $6,000.00</div>
                     <div className="text-sm">Available Credit: $701.31</div>
-                </div>          
+                </div>
             </div>
         </div>
     )

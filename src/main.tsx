@@ -23,15 +23,13 @@ import ForgotSubmission from './routes/sign-in/forgot-submission';
 import Permissions from './routes/permissions/permissions';
 import Shop from './routes/shop/shop';
 import CreateAccountJamesChow from './routes/create-account/create-account-james-chow';
+import CorporateAccountApplication from './routes/create-account/corporate-account-application';
+import ChooseAccount from './routes/create-account/choose-account';
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Landing />,
-    },
-    {
-        path: "/create-account",
-        element: <CreateAccount />,
     },
     {
         path: "/company-information",
@@ -108,6 +106,18 @@ const router = createBrowserRouter([
     {
         path: "/create-account/james-chow",
         element: <CreateAccountJamesChow />,
+    },
+    {
+        path: "/net-terms",
+        element: <CreateAccount />,
+    },
+    {
+        path: "/credit-card",
+        element: <CorporateAccountApplication />,
+    },
+    {
+        path: "/create-account",
+        element: <ChooseAccount />,
     },
 ]);
 

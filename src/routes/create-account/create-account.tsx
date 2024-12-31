@@ -9,27 +9,15 @@ const basic1 = [
     { title: "City", required: true },
     { title: "Type of Company", required: true },
     { title: "Province", required: true },
-    { title: "Business Since", required: true },
     { title: "Postal Code", required: true },
-]
-
-const basic2 = [
     { title: "Phone Number", required: true },
-    { title: "Company Website", required: false },
 ]
 
 const primary = [
     { title: "Name", required: true },
     { title: "Position", required: true },
     { title: "Phone Number", required: true },
-    { title: "Business Email", required: true },
-]
-
-const account = [
-    { title: "Name", required: true },
-    { title: "Position", required: true },
-    { title: "Phone Number", required: true },
-    { title: "Business Email", required: true },
+    { title: "Email", required: true },
 ]
 
 const agreement = [
@@ -43,14 +31,11 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
         window.scrollTo(0, 0);
     }, [location]);
 
-    const [websiteAvailable, setWebsiteAvailable] = useState('website-yes');
-    const [sameContact, setSameContact] = useState('same-no');
     const [termsAgree, setTermsAgree] = useState('terms-no');
 
     // States to track the validation status of fields
     const [invalidFields, setInvalidFields] = useState({
         basic1: [],
-        basic2: [],
         primary: [],
         account: [],
         agreement: [],
@@ -74,7 +59,6 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
         let isValid = true;
         const newInvalidFields = {
             basic1: [],
-            basic2: [],
             primary: [],
             account: [],
             agreement: [],
@@ -89,39 +73,11 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
             }
         }
 
-        // Check all basic2 fields
-        for (const field of basic2) {
-            const value = document.querySelector(`input[name="${field.title}"], select[name="${field.title}"]`)?.value;
-            if (field.required && !value) {
-                isValid = false;
-                newInvalidFields.basic2.push(field.title);
-            }
-            if(field.title === "Company Website" && !value && websiteAvailable === 'website-yes') {
-                isValid = false;
-                newInvalidFields.basic2.push(field.title);
-            }
-            if(field.title === "Company Website" && !(value.includes(".")) && websiteAvailable === 'website-yes') {
-                isValid = false;
-                newInvalidFields.basic2.push(field.title);
-            }
-        }
-
         // Check all primary contact fields
         for (const field of primary) {
             if (primaryContactValues[field.title] === '') {
                 isValid = false;
                 newInvalidFields.primary.push(field.title);
-            }
-        }
-
-        // Check all accounts payable contact fields
-        if(sameContact === 'same-no') {
-            for (const field of account) {
-                const value = document.querySelector(`input[name="${field.title}"], select[name="${field.title}"]`)?.value;
-                if (field.required && !value) {
-                    isValid = false;
-                    newInvalidFields.account.push(field.title);
-                }
             }
         }
 
@@ -164,16 +120,14 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
                     <form onSubmit={handleSubmit}>
                         <div className="flex flex-col">
                             <div className="flex flex-row justify-between mt-10">
-                                <div className="font-bold text-2xl">Corporate Account Application</div>
+                                <div className="font-bold text-2xl">Net Credit Terms Application</div>
                                 {referral.map(item => (
                                     <div>
                                         <div>{item.name}</div>
                                     </div>
                                 ))}
                             </div>
-                            
-                            <div className="mt-4">To help Canada Computers serve you as a corporate customer, please fill out the form below.</div>
-                            <div className="font-semibold text-xl mt-8 mb-2">Basic Information</div>
+                            <div className="font-semibold text-xl mt-10 mb-2">Basic Information</div>
                             <div className="columns-4 gap-8">
                                 {basic1.map(item => (
                                     <div className="mb-5" key={item.title}>
@@ -182,9 +136,9 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
                                             <div className="relative w-full">
                                                 <select className={getInputClassName(item.title, 'basic1')} name={item.title}>
                                                     <option value="" disabled selected>Please Select</option>
-                                                    <option>Corporate</option>
-                                                    <option>Reseller</option>
-                                                    <option>Government</option>
+                                                    <option>Education or Government</option>
+                                                    <option>Business: Less than 20 Employees</option>
+                                                    <option>Business: 21 or more Employees</option>
                                                 </select>
                                             </div>
                                         }
@@ -219,44 +173,7 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
                                 ))}
                             </div>
 
-                            <div className="columns-4 gap-8">
-                                {basic2.map(item => (
-                                    <div key={item.title}>
-                                        <label className="text-left mb-1 text-sm">{item.title}</label>
-                                        {item.title === "Company Website" && websiteAvailable === 'website-yes' &&
-                                            <div>
-                                                <div className="relative cursor-pointer" onClick={() => {setWebsiteAvailable('website-no')}}>
-                                                    <div className="flex flex-row gap-x-2 absolute items-center right-0 bottom-0">
-                                                        <Square size={20} weight="light" />
-                                                        <div className="text-sm">Not Available</div>
-                                                    </div>
-                                                </div>
-                                                <input type="text" name={item.title} className={getInputClassName(item.title, 'basic2')} />
-                                            </div>
-                                        }
-                                        {item.title === "Company Website" && websiteAvailable === 'website-no' &&
-                                            <div>
-                                                <div className="relative cursor-pointer" onClick={() => {setWebsiteAvailable('website-yes')}}>
-                                                    <div className="flex flex-row gap-x-2 absolute items-center right-0 bottom-0">
-                                                        <CheckSquare size={20} weight="light" />
-                                                        <div className="text-sm">Not Available</div>
-                                                    </div>
-                                                </div>
-                                                <input type="text" name={item.title} className="text-sm w-full bg-slate-100 border border-slate-400 rounded py-2.5 px-3 mt-1.5 focus:outline-none cursor-default" />
-                                            </div>
-                                        }
-                                        {item.title !== "Company Website" &&
-                                            <input
-                                                type="text"
-                                                name={item.title}
-                                                className={getInputClassName(item.title, 'basic2')}
-                                            />
-                                        }
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className="font-semibold text-xl mt-8 py-2">Primary Contact</div>
+                            <div className="font-semibold text-xl mt-8 py-2">Accounts Payable Contact</div>
                             <div className="columns-4 gap-8">
                                 {primary.map(item => (
                                     <div key={item.title}>
@@ -270,109 +187,42 @@ function CreateAccount({ referral=[{ name: ""  },] })  {
                                     </div>
                                 ))}
                             </div>
-
-                            {sameContact === 'same-no' &&
-                                <div>
-                                    <div className="font-semibold text-xl mt-8 py-2 flex flex-row justify-between">
-                                        <div>Accounts Payable Contact</div>
-                                        <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setSameContact('same-yes')}}>
-                                            <Square size={20} weight="light" />
-                                            <div className="text-sm font-normal">Same as Primary Contact</div>
-                                        </div>
-                                    </div>
-                                    <div className="columns-4 gap-8">
-                                        {account.map(item => (
-                                            <div key={item.title} className="mb-5">
-                                                <label className="text-left mb-1 text-sm">{item.title}</label>
+                            
+                            
+                            <div>
+                                <div className="font-bold text-xl mt-10 py-2">Apply for Net Terms</div>
+                                    {agreement.map(item => (
+                                        <div>
+                                            <div className="columns-4 gap-8">
+                                                <label className="text-left mb-1 text-sm">Request Credit Amount</label>
                                                 <input
                                                     type="text"
                                                     name={item.title}
-                                                    className={getInputClassName(item.title, 'account')}
+                                                    placeholder="$"
+                                                    className={getInputClassName(item.title, 'agreement')}
                                                 />
                                             </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            }
-
-                            {sameContact === 'same-yes' &&
-                                <div>
-                                    <div className="font-semibold text-xl mt-8 py-2 flex flex-row justify-between">
-                                        <div>Accounts Payable Contact</div>
-                                        <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setSameContact('same-no')}}>
-                                            <CheckSquare size={20} weight="light" />
-                                            <div className="text-sm font-normal">Same as Primary Contact</div>
-                                        </div>
-                                    </div>
-                                    <div className="columns-4 gap-8">
-                                        {primary.map(item => (
-                                            <div key={item.title} className="mb-5">
-                                                <label className="text-left mb-1 text-sm">{item.title}</label>
-                                                <input
-                                                    type="text"
-                                                    value={primaryContactValues[item.title]} // Mirror values from primary contact
-                                                    onChange={(e) => handlePrimaryContactChange(e, item.title)} // Updates to both
-                                                    className="text-sm w-full bg-slate-100 border border-slate-400 rounded py-2.5 px-3 mt-1.5 focus:outline-none cursor-default"
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            }
-                            
-                            {termsAgree === 'terms-no' &&
-                                <div>
-                                    <div className="font-bold text-xl mt-5 py-2">Apply for Net Terms (Optional)</div>
-                                        {agreement.map(item => (
-                                            <div>
-                                                <div className="columns-4 gap-8">
-                                                    <label className="text-left mb-1 text-sm">Request Credit Amount</label>
-                                                    <input
-                                                        type="text"
-                                                        name={item.title}
-                                                        placeholder="$"
-                                                        className={getInputClassName(item.title, 'agreement')}
-                                                    />
-                                                </div>
+                                            {termsAgree === 'terms-no' &&
                                                 <div className="flex flex-row text-sm mt-5 gap-x-2.5 items-center cursor-pointer" onClick={() => {setTermsAgree('terms-yes')}}>
                                                     <Square size={20} weight="light" className="shrink-0" />
                                                     <div>{item.title}</div>
                                                 </div>
-                                            </div>
-                                        ))}
-                                    <div className="text-sm mt-2.5">Please be advised that, in certain circumstances, we may reach out for additional information or connect you with one of our sales representatives.</div>
-                                </div>
-                            }
-
-                            {termsAgree === 'terms-yes' &&
-                                <div>
-                                    <div className="font-bold text-xl mt-5 py-2">Apply for Net Terms (Optional)</div>
-                                        {agreement.map(item => (
-                                            <div>
-                                                <div className="columns-4 gap-8">
-                                                    <label className="text-left mb-1 text-sm">Request Credit Amount</label>
-                                                    <input
-                                                        type="text"
-                                                        name={item.title}
-                                                        placeholder="$"
-                                                        className="text-sm w-full bg-slate-white border border-slate-400 rounded py-2.5 px-3 mt-1.5 focus:outline-none"
-                                                    />
-                                                </div>
+                                            }
+                                            {termsAgree === 'terms-yes' &&
                                                 <div className="flex flex-row text-sm mt-5 gap-x-2.5 items-center cursor-pointer" onClick={() => {setTermsAgree('terms-no')}}>
                                                     <CheckSquare size={20} weight="light" className="shrink-0" />
                                                     <div>{item.title}</div>
                                                 </div>
-                                            </div>
-                                        ))}
-                                    <div className="text-sm mt-2.5">Please be advised that, in certain circumstances, we may reach out for additional information or connect you with one of our sales representatives.</div>
-                                </div>
-                            }
+                                            }
+                                        </div>
+                                    ))}
+                            </div>
 
-                            <div className="py-4" />
+                            {/* <div className="py-4" />
 
                             <div className="mt-6">The information you submit will be reviewed within 1-2 business days. You will be contacted by email once your account has been approved.</div>
-                            <div className="mt-2">By submitting this application, I verify the information submitted on this application is accurate to the best of my knowledge.</div>
-                            <button type="submit" onClick={() => {topRef.current.scrollIntoView({ behavior: 'smooth' });}} className="bg-black text-ghost-white py-2 text-sm rounded-lg text-center w-48 font-semibold text-lg mt-6 mb-14">Submit Application</button>
+                            <div className="mt-2">By submitting this application, I verify the information submitted on this application is accurate to the best of my knowledge.</div> */}
+                            <button type="submit" onClick={() => {topRef.current.scrollIntoView({ behavior: 'smooth' });}} className="mt-10 bg-oxford-blue text-ghost-white py-2 text-sm rounded text-center w-48 font-semibold text-lg mt-6 mb-14">Submit Application</button>
                         </div>
                     </form>
                 </div>

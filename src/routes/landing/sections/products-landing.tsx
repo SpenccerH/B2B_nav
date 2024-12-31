@@ -12,7 +12,7 @@ const products = [
     { image: businesslaptop, title: "Business Laptops" },
     { image: SSD, title: "PC & Server Components" },
     { image: router, title: "Networking" },
-    { image: server2, title: "Servers & Workstations" },
+    { image: server2, title: "Workstations & Servers" },
 ]
 
 function ProductsLanding() {

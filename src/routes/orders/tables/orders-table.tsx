@@ -7,9 +7,8 @@ const titles = [
     { id: 1, name: "Order Number" },
     { id: 2, name: "Order Date" },
     { id: 3, name: "Order Status" },
-    { id: 4, name: "Ordered By" },
-    { id: 5, name: "Order Amount" },
-    { id: 6, name: "Tracking Number" },
+    { id: 4, name: "Order Amount" },
+    { id: 5, name: "Tracking Number" },
 ]
 
 function OrdersTable({ items=[
@@ -129,7 +128,6 @@ function OrdersTable({ items=[
                                     </span>
                                 }
                             </td>
-                            <td className="py-6 font-medium">{item.user}</td>
                             <td className="py-6 font-medium">{item.total}</td>
                             <td className="py-6 font-medium">{item.track}</td>
                             <td className="py-6 flex flex-row items-center gap-x-2.5">
