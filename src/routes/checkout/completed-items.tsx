@@ -16,7 +16,7 @@ function CompletedItems() {
                         </div>
                     </div>
                     <div>An order confirmation email will be sent to you.</div>
-                    <Link to="/order-details-pending" className="text-blue-700 hover:underline flex flex-row items-center gap-x-2.5">Review or edit your order<CaretRight /></Link>
+                    {/* <Link to="/order-details-pending" className="text-blue-700 hover:underline flex flex-row items-center gap-x-2.5">Review or edit your order<CaretRight /></Link> */}
                 </div>
             </div>
             <div className="border flex flex-row justify-between p-5 gap-y-1">

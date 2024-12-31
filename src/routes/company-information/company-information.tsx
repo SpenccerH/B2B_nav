@@ -12,8 +12,8 @@ const tabs = [
     { id: 1, title: 'General', content: <General /> },
     { id: 2, title: 'Users',  content: <Contacts /> },
     { id: 3, title: 'Shipping Addresses',  content: <Addresses /> },
-    { id: 4, title: 'Credit Cards',  content: <Credit /> },
-    { id: 5, title: 'Authorized Pickup List',  content: <Authorized /> },
+    // { id: 4, title: 'Credit Cards',  content: <Credit /> },
+    { id: 4, title: 'Authorized Pickup List',  content: <Authorized /> },
 ]
 
 function CompanyInformation() {

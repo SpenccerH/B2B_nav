@@ -54,7 +54,7 @@ function Recent() {
                 <div className="text-2xl">Recently Viewed</div>
                 <div className="flex flex-row items-center gap-x-10">
                     {/* Controls for the global quantity multiplier */}
-                    <div className="flex justify-center border border-slate-300 rounded-full">
+                    {/* <div className="flex justify-center border border-slate-300 rounded-full">
                         <button onClick={handleDecreaseAll} className="p-2.5 border-r rounded-l-full hover:bg-slate-100">
                             <Minus size={10} />
                         </button>
@@ -68,7 +68,7 @@ function Recent() {
                             <Plus size={10} />
                         </button>
                     </div>
-                    <div>Subtotal: ${totalPrice.toFixed(2)}</div>
+                    <div>Subtotal: ${totalPrice.toFixed(2)}</div> */}
                 </div>                
             </div>
 

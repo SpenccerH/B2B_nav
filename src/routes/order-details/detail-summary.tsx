@@ -18,7 +18,7 @@ function DetailSummary() {
                     </div>
                     <div className="flex flex-row justify-between items-center border-t pt-2.5">
                         <div className="font-medium">Total:</div>
-                        <div className="text-sm font-medium text-red-600">$2,939.77</div>
+                        <div className="text-sm font-medium">$2,939.77</div>
                     </div>
                 </div>
             </div>

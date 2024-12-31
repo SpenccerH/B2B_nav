@@ -111,7 +111,7 @@ function CheckoutItems() {
                                 </div>
                                 {po === "po-yes" &&
                                     <div className="text-sm font-medium flex flex-row gap-x-5 justify-between items-center">
-                                        <div className="w-60">Purchase Order (PO) Number:</div>
+                                        <div className="w-60">Purchase Order Number:</div>
                                         <div className="flex flex-row items-center gap-x-10 grow">
                                             <input type="text" placeholder="" className="border text-sm text-black border-slate-400 focus:outline-none px-3 py-1.5 grow" />
                                             <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setPo('po-no')}}>
@@ -123,7 +123,7 @@ function CheckoutItems() {
                                 }
                                 {po === "po-no" &&
                                     <div className="text-sm font-medium flex flex-row gap-x-5 justify-between items-center">
-                                        <div className="w-60">Purchase Order (PO) Number:</div>
+                                        <div className="w-60">Purchase Order Number:</div>
                                         <div className="flex flex-row items-center gap-x-10 grow">
                                             <input type="text" placeholder="" className="bg-slate-100 cursor-default border text-sm text-black border-slate-400 focus:outline-none px-3 py-1.5 grow" />
                                             <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setPo('po-yes')}}>
@@ -175,7 +175,7 @@ function CheckoutItems() {
                                 </div>
                                 {po === "po-yes" &&
                                     <div className="text-sm font-medium flex flex-row gap-x-5 justify-between items-center">
-                                        <div className="w-60">Purchase Order (PO) Number:</div>
+                                        <div className="w-60">Purchase Order Number:</div>
                                         <div className="flex flex-row items-center gap-x-10 grow">
                                             <input type="text" placeholder="" className="border text-sm text-black border-slate-400 focus:outline-none px-3 py-1.5 grow" />
                                             <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setPo('po-no')}}>
@@ -187,7 +187,7 @@ function CheckoutItems() {
                                 }
                                 {po === "po-no" &&
                                     <div className="text-sm font-medium flex flex-row gap-x-5 justify-between items-center">
-                                        <div className="w-60">Purchase Order (PO) Number:</div>
+                                        <div className="w-60">Purchase Order Number:</div>
                                         <div className="flex flex-row items-center gap-x-10 grow">
                                             <input type="text" placeholder="" className="bg-slate-100 cursor-default border text-sm text-black border-slate-400 focus:outline-none px-3 py-1.5 grow" />
                                             <div className="flex flex-row gap-x-2 items-center cursor-pointer" onClick={() => {setPo('po-yes')}}>
@@ -341,7 +341,7 @@ function CheckoutItems() {
                                 </div>
                             } */}
                             <div className="flex flex-col gap-y-1.5">
-                                <div className="text-sm font-medium">Issue Date: 2024-04-26</div>
+                                {/* <div className="text-sm font-medium">Issue Date: 2024-04-26</div>
                                 {terms === "30" &&
                                     <div className="text-sm text-secondary">Payment due 2024-05-26 (NET30). You will receive an invoice on the Order Management page.</div>
                                 }
@@ -350,7 +350,7 @@ function CheckoutItems() {
                                 }
                                 {terms === "60" &&
                                     <div className="text-sm text-secondary">Payment due 2024-06-25 (NET60). You will receive an invoice on the Order Management page.</div>
-                                }
+                                } */}
                             </div>
                             <div>
                                 <Link to="/checkout-review" className="text-sm text-white rounded-sm bg-blue-900 hover:bg-blue-800 px-4 py-1.5 inline-block w-auto cursor-pointer" onClick={() => setSection('payment')}>

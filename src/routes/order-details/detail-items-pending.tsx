@@ -65,7 +65,10 @@ function DetailItemsPending() {
                                     <img src={item.image} className="h-20" />
                                     <div className="flex flex-col gap-y-1">
                                         <div className="font-medium">{item.name}</div>
-                                        <div className="text-sm text-secondary">Item Code: {item.code}</div>
+                                        <div className="flex flex-row gap-x-5 items-center">
+                                            <div className="text-sm text-secondary">Item Code: {item.code}</div>
+                                            <div className="text-xs text-blue-700 hover:underline cursor-pointer">Re-Order</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="flex flex-col w-56 items-end">

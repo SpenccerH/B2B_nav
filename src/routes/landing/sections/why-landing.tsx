@@ -1,12 +1,12 @@
-import { Scroll, Cardholder, ClipboardText, HandCoins, Laptop, UserFocus } from "@phosphor-icons/react";
+import { Scroll, Phone, ClipboardText, HandCoins, Laptop, UserFocus } from "@phosphor-icons/react";
 
 const services = [
-    { icon: <Laptop size={60} weight="light" />, title: "Online Ordering", body: "Shop online anytime with support from multiple buyers." },
-    { icon: <HandCoins size={60} weight="light" />, title: "Savings on Products", body: "Receive special pricing tailored to your business." },
-    { icon: <Cardholder size={60} weight="light" />, title: "Flexible Payment Options", body: "Credit cards, Net terms credit account, and more." },
-    { icon: <ClipboardText size={60} weight="light" />, title: "Access to an Account Manager", body: "Personalized support from an account manager." },
-    { icon: <UserFocus size={60} weight="light" />, title: "Pickup In-Store", body: "Pickup the product you need directly from our stores." },
-    { icon: <Scroll size={60} weight="light" />, title: "Special Orders", body: "Including custom specifications, bulk quantities, and hard-to-find items." },
+    { icon: <Laptop size={60} weight="light" />, title: "Online Ordering", body: "Shop online with your business account, with support for multiple user logins." },
+    { icon: <Scroll size={60} weight="light" />, title: "Flexible Return Policy", body: "Lenient returns and extended warranties on certain products." },
+    { icon: <ClipboardText size={60} weight="light" />, title: "Custom Built Systems", body: "We can build any PCs, workstations and servers with any configuration to meet your specific needs." },
+    { icon: <HandCoins size={60} weight="light" />, title: "Savings on Products", body: "Receive special discounts based on your volume of orders." },
+    { icon: <UserFocus size={60} weight="light" />, title: "Localized Service", body: "Have your product picked up at any of our stores with access to technical support." },
+    { icon: <Phone size={60} weight="light" />, title: "Scalable Pricing", body: "Pricing aligned with your business size to ensure the best value for every stage of growth." },
 ]
 
 function WhyLanding() {
@@ -20,7 +20,7 @@ function WhyLanding() {
                             <div className="flex flex-col gap-y-2 items-center text-center border rounded p-5 h-48 bg-tabs-gray">
                                 <div>{item.icon}</div>
                                 <div className="font-extrabold">{item.title}</div>
-                                <div>{item.body}</div>
+                                <div className="text-sm">{item.body}</div>
                             </div>
                         </div>
                     ))}

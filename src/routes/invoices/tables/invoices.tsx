@@ -8,9 +8,8 @@ const titles = [
     { id: 2, name: "Invoice Date" },
     { id: 3, name: "Due Date" },
     { id: 4, name: "Invoice Status" },
-    { id: 5, name: "Ordered By" },
-    { id: 6, name: "Invoice Amount" },
-    { id: 7, name: "Balance" },
+    { id: 5, name: "Invoice Amount" },
+    { id: 6, name: "Balance" },
 ]
 
 function Invoices({ items })  {
@@ -121,7 +120,6 @@ function Invoices({ items })  {
                                     </span>
                                 }
                             </td>
-                            <td className="py-6 font-medium">{item.user}</td>
                             <td className="py-6 font-medium">{item.total}</td>
                             <td className="py-6 font-medium">{item.payable}</td>
                             <td className="py-6 flex flex-row items-center gap-x-2.5">
